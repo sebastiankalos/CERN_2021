@@ -76,27 +76,38 @@ this is the start of what Seb added: */
 SELECT, FLAG=ERROR, PATTERN="^MQ\.";
   EFCOMP, ORDER=1, RADIUS=1,
           DKNR:= {0, (12*GAUSS())*10^(-4), 0, 0, 0}; 
+
+!select, flag=error, clear;
 SELECT, FLAG=ERROR, PATTERN="^MQT";
   EFCOMP, ORDER=1, RADIUS=1,
           DKNR:= {0, (75*GAUSS())*10^(-4), 0, 0, 0}; 
+
+!select, flag=error, clear;
 SELECT, FLAG=ERROR, PATTERN="^MQM";
   EFCOMP, ORDER=1, RADIUS=1,
           DKNR:= {0, (12*GAUSS())*10^(-4), 0, 0, 0}; 
+
+!select, flag=error, clear;
 SELECT, FLAG=ERROR, PATTERN="^MQY";
   EFCOMP, ORDER=1, RADIUS=1,
           DKNR:= {0, (11*GAUSS())*10^(-4), 0, 0, 0}; 
+
+!select, flag=error, clear;
 SELECT, FLAG=ERROR, PATTERN="^MQW";
   EFCOMP, ORDER=1, RADIUS=1,
           DKNR:= {0, (15*GAUSS())*10^(-4), 0, 0, 0}; 
+
+!select, flag=error, clear;
 SELECT, FLAG=ERROR, PATTERN="^MB";
   EFCOMP, ORDER=1, RADIUS=1,
           DKNR:= {0, (4*GAUSS())*10^(-4), 0, 0, 0}; 
 
-
-!SELECT, FLAG=ERROR, PATTERN="^MQ.22R4.B1";
+!select, flag=error, clear;
+!SELECT, FLAG=ERROR, PATTERN="^MQ\.28R3\.B1$";
 !  EFCOMP, ORDER=1, RADIUS=1,
-!          DKNR:= {0, (100)*10^(-4), 0, 0, 0}; 
+!          DKNR:= {0, 100*10^(-4), 0, 0, 0}; 
 
+select, flag=error, clear;
 SELECT, FLAG = ERROR, FULL;
   ESAVE, FILE = output/all_err.file; !saves the list of elements with field errors (FULL --> all of them!)
 
